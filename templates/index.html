@@ -29,7 +29,12 @@
     <ul>
         {% for task in tasks %}
         <li>
-            {{ task }}
+            <span>
+                {{ task.text }} 
+                <span style="font-size: 0.8em; background: #eee; padding: 2px 6px; border-radius: 4px; margin-left: 10px; color: #555;">
+                    {{ task.tag }}
+                </span>
+            </span>
             <a href="/delete/{{ loop.index0 }}">Delete</a>
         </li>
         {% endfor %}
